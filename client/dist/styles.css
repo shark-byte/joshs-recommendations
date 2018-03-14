@@ -1,0 +1,154 @@
+body{
+  margin: 0;
+  background-color: #f1f1f2;
+}
+#recommendations-app{
+  font-family: 'Roboto';
+}
+.recommendations-title{
+  font-size: 20px;
+  margin: 0 40px 30px;
+  padding-top: 15px;
+  border-top: 1px #101820 solid;
+}
+.recommendations-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 40px;
+}
+.restaurant-card{
+  display: flex;
+  height: 218px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  font-family: 'Roboto';
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.restaurant-card:hover .restaurant-card-details-title-text{
+  border-bottom: solid 1px #b70038;
+}
+.restaurant-card-photo-carousel{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.restaurant-card-photo-carousel-arrow-left{
+  position: absolute;
+  align-self: flex-start;
+  height: 40px;
+  width: 40px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: white;
+}
+.restaurant-card-photo-carousel-arrow-left:hover{
+  background: black;
+  cursor: pointer;
+}
+.restaurant-card-photo-carousel-arrow-left:focus{
+  outline: 0;
+}
+.restaurant-card-photo-carousel-arrow-right{
+  position: absolute;
+  align-self: flex-end;
+  height: 40px;
+  width: 40px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: white;
+}
+.restaurant-card-photo-carousel-arrow-right:hover{
+  background: black;
+  cursor: pointer;
+}
+.restaurant-card-photo-carousel-arrow-right:focus{
+  outline: 0;
+}
+.restaurant-card-photos{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.restaurant-card-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 24px;
+  flex: 3;
+}
+.restaurant-card-details-title{
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.restaurant-card-details-tags{
+  color: #656666;
+  font-size: 12px;
+  letter-spacing: .05em;
+  margin: 5px 0;
+  font-weight: 300;
+}
+.restaurant-card-details-ratings{
+  letter-spacing: .05em;
+  display: flex;
+  align-items: center;
+}
+.restaurant-card-details-zagat-rating-icon{
+  height: 22px;
+  padding-right: 5px;
+}
+.restaurant-card-details-zagat-rating{
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right: 5px;
+}
+.restaurant-card-details-zagat-rating-value{
+  color: #b70038;
+  font-size: 12px;
+}
+.restaurant-card-details-rating-divider{
+  border-right: 1px solid #d0d2d3;
+  height: 20px;
+  margin: 0 10px;
+}
+.restaurant-card-details-google-rating-icon{
+  height: 18px;
+  padding-right: 5px;
+}
+.restaurant-card-details-google-rating-value{
+  font-size: 12px;
+  margin-right: 5px;
+}
+.restaurant-card-details-google-rating-stars{
+  position: relative;
+}
+.restaurant-card-details-star-ratings-top{
+  font-size: 10px;
+  line-height: 1.6;
+  color: #101820;
+  position: absolute;
+  overflow: hidden;
+}
+.restaurant-card-details-star-ratings-bottom{
+  font-size: 10px;
+  line-height: 1.6;
+  color: #CFD1D2;
+}
+.restaurant-card-details-google-rating-count{
+  font-size: 12px;
+  margin-left: 5px;
+}
+.restaurant-card-details-description{
+  font-size: 12px;
+  letter-spacing: .05em;
+  margin-top: 5px;
+  line-height: 1.6;
+}

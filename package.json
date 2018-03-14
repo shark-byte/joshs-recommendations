@@ -1,0 +1,58 @@
+{
+  "name": "WeGot-Recommendations",
+  "version": "",
+  "description": "nearby recommendations",
+  "author": "Stacy Lin",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "server": "nodemon ./server/index.js",
+    "react-dev": "webpack -d --watch",
+    "database": "mongod",
+    "seed-database": "node seed.js",
+    "test": "jest",
+    "start": "node ./server/index.js",
+    "dockertest": "npm run seed-database && npm start",
+    "docker": "DB_ADDRESS=database npm run seed-database && DB_ADDRESS=database npm start"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.17.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.4",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "mongoose": "^4.6.4",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^22.4.1",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.28.10",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-15": "^1.0.5",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest": "^22.4.2",
+    "nodemon": "^1.11.0",
+    "style-loader": "^0.20.2",
+    "webpack": "^3.11"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/client/src/components/setupTests.js"
+  }
+}
