@@ -19,7 +19,7 @@ const RestaurantDetails = (props) => {
   return(
     <div className="restaurant-card-details">
       <div className="restaurant-card-details-title"><span className="restaurant-card-details-title-text">{restaurant.name}</span></div>
-      <div className="restaurant-card-details-tags">{restaurant.types[0]} · {restaurant.neighborhood} · {numDollarSign(restaurant.price_level)}</div>
+      <div className="restaurant-card-details-tags">{restaurant.tags[0]} · {restaurant.neighbourhood} · {numDollarSign(restaurant.price_level)}</div>
       <div className="restaurant-card-details-ratings">
         <img src="http://res.cloudinary.com/madlicorice/image/upload/v1520407648/WeGot_small_logo_circle.png" alt="wegot-logo" className="restaurant-card-details-zagat-rating-icon"></img><span className="restaurant-card-details-zagat-rating">Food </span><span className="restaurant-card-details-zagat-rating-value">{restaurant.zagat_food_rating}</span>
         <div className="restaurant-card-details-rating-divider"></div>

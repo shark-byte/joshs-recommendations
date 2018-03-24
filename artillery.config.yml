@@ -1,0 +1,21 @@
+config:
+  target: 'http://localhost:3004'
+  http:
+    pool: 20 # All HTTP requests from all virtual users will be sent over the same 10 connections
+  phases:
+    - duration: 20
+      arrivalRate: 20
+      rampTo: 50
+  processor: "./my-function.js"
+scenarios:
+- name: "View a restaurant"
+  flow:
+    # call generateRandomData() to create the id variables
+   
+      - function: "generateRandomData"
+      - loop:
+          - get:
+              url: "/api/restaurants/{{ id }}"
+
+      # - log: “Sent a request to /restaurants with {{ id }}”          
+        count: 100
